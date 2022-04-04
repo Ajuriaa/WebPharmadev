@@ -39,7 +39,7 @@ const LoginPage = () => {
       routerNavigator('/productos');
     } catch (ex) {
       dispatch({ type:'ON_LOGIN_ERROR', payload:{errors:['¡Credenciales Incorrectas!']}});
-      console.log('Error on Sigin submit', ex);
+      console.log('Error on Signin submit', ex);
     }
   }
   const onCancel = (e) => {

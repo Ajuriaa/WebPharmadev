@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 const Private = ({children})=>{
   const { email } = useSelector( (state)=>state.security );
   if ( /^\s*$/.test(email)) {
-    return (<Navigate to='/login' />);
+    return (<Navigate to='/productos' />);
   }
   return (
       <>

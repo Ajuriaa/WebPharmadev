@@ -12,11 +12,12 @@ export const securityReducer = (state = defaultSecurity, action) => {
   const {type, payload} = action || {};
   switch(type){
     case 'ON_SIGN_IN_LOADING':
-      break;
+      return {...state, isLoading:true, errors:[]};
     case 'ON_SIGN_IN_SUCCESS':
-      break;
+      setJWT(payload.jwtToken);
+      return {...state, ...payload, isLoading:false, errors:[]};
     case 'ON_SIGN_IN_ERROR':
-      break;
+      return {...state, errors: payload.errors, isLoading:false};
     case 'ON_LOGIN_LOADING':
       return {...state, isLoading:true, errors:[]};
     case 'ON_LOGIN_SUCCESS':
