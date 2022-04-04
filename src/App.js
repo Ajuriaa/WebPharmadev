@@ -21,9 +21,8 @@ function App() {
             <Route path="/" element={<Splash />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<Signin />} />
-
-            <Route path="/todos" element={<Private><Todo /></Private>} />
-            <Route path="/productos" element={<Private><Productos /></Private>} />
+            <Route path="/todos" element={<Todo />} />
+            <Route path="/productos" element={<Productos />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>

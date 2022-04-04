@@ -13,7 +13,7 @@ const ProductosPage = ()=>{
       const loadData = async ()=> {
         dispatch({type:'Productos_LOADING', payload:{}});
         try {
-          const { data: {Productos,  status}} = await privateAxios.get('/api/v1/productos/all');
+          const { data: {Productos,  status}} = await privateAxios.get('/api/v1/productos/facet/1/10');
           dispatch({type:'Productos_SUCCESS', payload: {productos}});
         } catch(ex){
           console.log(ex);
