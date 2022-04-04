@@ -37,7 +37,7 @@ const Login = ({
         <PrimaryButton onClick={onConfirmClick}>
           Iniciar Sesión
         </PrimaryButton>
-        <SecondaryButton onClick={onCancelClick}>
+        <SecondaryButton onClick={onCancelClick} navigate={'/signin'}>
           Crear Cuenta
         </SecondaryButton>
       </section>

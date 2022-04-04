@@ -1,8 +1,10 @@
 import Signin from './Signin';
 import { useState } from 'react';
 import { publicAxios } from '../../../Lib/apiClient';
+import { useNavigate } from 'react-router-dom';
 
 const SigninPage = ()=>{
+  const routerNavigator = useNavigate();
   const [txtCorreo, setTxtCorreo] = useState('');
   const [txtPassword, setTxtPassword] = useState('');
   const onChangeHandler = ({target: {name, value}})=>{
@@ -34,7 +36,7 @@ const SigninPage = ()=>{
   const onCancel = (e)=>{
     e.preventDefault();
     e.stopPropagation();
-
+    routerNavigator('/login');
   }
   // const onChangeHandler = (e) => {
   //   const {name, value} = e.target;

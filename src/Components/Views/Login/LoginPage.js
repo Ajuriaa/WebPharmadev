@@ -45,7 +45,7 @@ const LoginPage = () => {
   const onCancel = (e) => {
     e.preventDefault();
     e.stopPropagation();
-
+    routerNavigator('/signin');
   }
   console.log('Login', isLoading);
   return (
