@@ -30,6 +30,15 @@
   transition: ease-in-out 0.6s
 }
 
+.RadioBtn{
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  text-shadow: -50px 0px 0px rgba(66,66,66,.0);
+  transition: ease-in-out 0.6s
+}
+
 .form_field input:focus {
   outline-color: #353940;
   outline-width: thin;

@@ -2,15 +2,24 @@ import Page from "../../UX/Page/Page";
 import Input from "../../UX/Forms/Input";
 import { PrimaryButton, SecondaryButton } from "../../UX/Forms/Button";
 import Nav from "../../UX/Nav/Nav";
+import React, { Component } from "react";
+
 const SignIn = ({
   txtCorreoValue,
   txtPasswordValue,
+  txtUserValue,
+  rdGenero,
+  errorDireccion,
+  txtDireccionValue,
+  errorPhone,
+  txtPhoneValue,
+  errorUser,
   onChange: onChangeHandler,
   errorTxtCorreo,
   errorPassword,
   onConfirmClick,
   onCancelClick
-})=> {
+}) => {
   return (
     <Page header={(<h2>&nbsp;Crear Cuenta</h2>)} footer={<Nav />}>
       <section>
@@ -33,6 +42,37 @@ const SignIn = ({
           error={errorPassword}
           onChange={onChangeHandler}
         />
+        <Input
+          label="Nombre de Usuario"
+          type="text"
+          name="txtUser"
+          placeholder="Nombre de Usuario"
+          value={txtUserValue}
+          error={errorUser}
+          onChange={onChangeHandler}
+        />
+        <Input
+          label="Telefono"
+          type="text"
+          name="txtPhone"
+          placeholder="Telefono de Usuario"
+          value={txtPhoneValue}
+          error={errorPhone}
+          onChange={onChangeHandler}
+        />
+        <Input
+          label="Direccion"
+          type="text"
+          name="txtDireccion"
+          placeholder="Direccion de Usuario"
+          value={txtDireccionValue}
+          error={errorDireccion}
+          onChange={onChangeHandler}
+        />
+        <div className="RadioBtn" onChange={rdGenero}>
+          <input  type="radio" value="Masculino" name="gender"/> Masculino
+          <input  type="radio" value="Femenino" name="gender"/> Femenino
+        </div>
         <PrimaryButton onClick={onConfirmClick}>
           Crear Cuenta
         </PrimaryButton>
