@@ -14,12 +14,9 @@ const splashStyle = {
 }
 const Splash = ()=>{
   const navigate = useNavigate();
-  const shouldRedirect = true;
   React.useEffect(() => {
     setTimeout(()=>{
-      if (shouldRedirect) {
-        navigate('/login');
-      }
+      navigate('/login');
     }, 1500);
   });
   return(
