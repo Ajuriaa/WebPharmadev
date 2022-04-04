@@ -1,5 +1,5 @@
-const defaultPacientes = {
-  pacientes: [],
+const defaultProductos = {
+  productos: [],
   isLoading: false,
   errors: [],
   totalPages:0,
@@ -8,24 +8,24 @@ const defaultPacientes = {
   totalItems:0
 }
 
-export const pacientesReducer = (state = defaultPacientes, action)=>{
+export const productosReducer = (state = defaultProductos, action)=>{
   const {type, payload} = action;
   switch(type){
-    case 'PACIENTES_LOADING':
+    case 'PRODUCTOS_LOADING':
       return {...state, isLoading: true};
-    case 'PACIENTES_FAILED':
-      return {...state, isLoading: false, errors:['Error al cargar pacientes']};
-    case 'PACIENTES_SUCCESS':
+    case 'PRODUCTOS_FAILED':
+      return {...state, isLoading: false, errors:['Error al cargar Productos']};
+    case 'PRODUCTOS_SUCCESS':
       return {
         ...state,
-        pacientes:[...payload.pacientes],
+        productos:[...payload.productos],
         isLoading: false,
         errors:[]
       };
-    case 'PACIENTES_CLEAR':
+    case 'PRODUCTOS_CLEAR':
       return {
         ...state,
-        pacientes: [],
+        productos: [],
         isLoading: false,
         errors: []
       };

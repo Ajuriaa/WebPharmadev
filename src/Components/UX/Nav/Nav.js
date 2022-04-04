@@ -11,10 +11,10 @@ const Nav = ()=>{
         <ul>
           <li>
             <NavLink
-              to='/pacientes'
-              className={currentLocation.pathname === '/pacientes' ? 'active' : ''}
+              to='/productos'
+              className={currentLocation.pathname === '/productos' ? 'active' : ''}
             >
-              Pacientes
+              Productos
             </NavLink>
           </li>
           <li>
