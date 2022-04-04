@@ -9,7 +9,6 @@ import {store, persistor} from './Store';
 import Splash from './Components/Views/Splash';
 import Signin from './Components/Views/Signin/SigninPage';
 import Login from './Components/Views/Login/LoginPage';
-import Todo from './Components/Views/Todo/TodoPage';
 import Productos from './Components/Views/Productos/ProductosPage';
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
             <Route path="/" element={<Splash />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<Signin />} />
-            <Route path="/todos" element={<Todo />} />
             <Route path="/productos" element={<Productos />} />
           </Routes>
         </BrowserRouter>

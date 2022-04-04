@@ -17,14 +17,6 @@ const Nav = ()=>{
               Productos
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to='/todos'
-              className={currentLocation.pathname === '/todos' ? 'active' : ''}
-            >
-              Todos
-            </NavLink>
-          </li>
         </ul>
       </nav>
     );
