@@ -22,7 +22,6 @@ const Input = (
       <input
         type={type}
         name={name}
-        placeholder={placeholder}
         value={value}
         onChange={onChangeHandler}
         {...rest}

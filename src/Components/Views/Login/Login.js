@@ -12,7 +12,7 @@ const Login = ({
   onCancelClick
 }) => {
   return (
-    <Page header={(<h2>&nbsp;Iniciar Sesión</h2>)} footer={<Nav/>}>
+    <Page header={(<h2>&nbsp;Iniciar Sesión</h2> )} footer={<Nav/>}>
       <section>
         <Input
           label="Correo Electrónico"

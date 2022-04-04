@@ -1,5 +1,6 @@
 
 import './Page.css';
+import logo from '../../Images/logoPharmaDev.jpeg'
 const Page = ({header: headerComponent, footer: footerComponent, children})=>{
   const hasHeader = headerComponent && true;
   const hasFooter = footerComponent && true;
@@ -12,6 +13,7 @@ const Page = ({header: headerComponent, footer: footerComponent, children})=>{
       hasHeader &&
       <header className="page_header">
         {headerComponent}
+        <img src={logo} className="logo"/>
       </header>
       }
       <main>
