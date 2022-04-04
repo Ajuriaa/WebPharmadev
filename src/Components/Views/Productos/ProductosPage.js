@@ -15,10 +15,12 @@ const ProductosPage = ()=>{
         try {
           const { data: {Productos,  status}} = await privateAxios.get('/api/v1/productos/all');
           dispatch({type:'Productos_SUCCESS', payload: {productos}});
+          console.log(Productos);
         } catch(ex){
           console.log(ex);
           dispatch({ type: 'Productos_FAILED', payload: {} });
         }
+        
       }
       loadData();
     }
