@@ -26,9 +26,13 @@
   color: #fff;
   padding: 0.5rem 1rem;
   text-align:center;
+  transition: all 0.7s ease-in-out;
 }
 
 .page_footer nav ul li a.active{
-  background-color: #fff;
-  color:#000;
+  background-color: #04BFBF;
+  color:#242629;
+  font-weight: 500;
+  border-radius: 7px;
+  transition: all 0.7s ease-in-out;
 }
