@@ -1,3 +1,4 @@
+import {setJWT} from '../../../Lib/apiClient'
 const defaultProductos = {
   productos: [],
   isLoading: false,
@@ -16,6 +17,7 @@ export const productosReducer = (state = defaultProductos, action)=>{
     case 'PRODUCTOS_FAILED':
       return {...state, isLoading: false, errors:['Error al cargar Productos']};
     case 'PRODUCTOS_SUCCESS':
+      setJWT(payload.jwtToken);
       return {
         ...state,
         productos:[...payload.productos],
