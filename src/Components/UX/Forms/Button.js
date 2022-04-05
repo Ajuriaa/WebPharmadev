@@ -38,6 +38,16 @@ export const AddButton = ({ children, ...rest }) => {
     </BaseButton>
   );
 }
+export const  DeleteButton = ({ children, ...rest }) => {
+  return (
+    <BaseButton
+      className="button_delete"
+      {...rest}
+    >
+      {children}
+    </BaseButton>
+  );
+}
 
 
 export const Button = ({ children, ...rest }) => {
