@@ -25,6 +25,17 @@ const LoginPage = () => {
     e.stopPropagation();
     try {
       dispatch({ type:'ON_LOGIN_LOADING', payload:{}});
+      const data = await publicAxios.post(
+        '/api/v1/seguridad/login',
+        {
+          email: txtCorreo,
+          password: txtPassword
+        }
+      );
+      console.log('Signin Request: ', data.data)
+      const {jwt:jwtToken, user} = data.data;
+
+      dispatch({ type:'ON_LOGIN_SUCCESS', payload:{jwtToken, ...user}});
       routerNavigator('/productos');
     } catch (ex) {
       dispatch({ type:'ON_LOGIN_ERROR', payload:{errors:['¡Credenciales Incorrectas!']}});
