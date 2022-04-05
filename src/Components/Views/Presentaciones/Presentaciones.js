@@ -1,10 +1,14 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
+import {AddButton} from "../../UX/Forms/Button";
 import './Presentaciones.css';
 
-const Presentaciones = ({presentaciones})=>{
+const Presentaciones = ({presentaciones, onCancelClick})=>{
   return (
     <Page header={<h2>Presentaciones</h2>} footer={<Nav/>}>
+    <AddButton onClick={onCancelClick}>
+        Agregar
+    </AddButton>
     {
       presentaciones.map((o) => (
         <PresentacionesItem key={o._id} presentacion={o} />

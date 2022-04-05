@@ -14,6 +14,8 @@ import Presentaciones from './Components/Views/Presentaciones/PresentacionesPage
 import Laboratorios from './Components/Views/Laboratorios/LaboratoriosPage';
 import Modal from './Components/Views/Modal Add/ModalPage';
 import ModalDelete from './Components/Views/ModalDelete/ModalDeletePage'
+import ModalLab from './Components/Views/Modal Add/Laboratorio/ModalPage';
+import ModalPre from './Components/Views/Modal Add/Presentaciones/ModalPage';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <Route path="/laboratorios" element={<Laboratorios />} />
             <Route path="/modal" element={<Modal />} />
             <Route path="/modalDelete" element={<ModalDelete />} />
+            <Route path="/modallab" element={<ModalLab />} />
+            <Route path="/modalpre" element={<ModalPre />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>
