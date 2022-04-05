@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { privateAxios } from '../../../Lib/apiClient';
+import { useNavigate } from 'react-router-dom';
 import Loading from '../../UX/Loading/Loading';
 import Presentaciones from './Presentaciones';
 
 const PresentacionesPage = ()=>{
   const dispatch = useDispatch();
+  const routerNavigator = useNavigate();
   useEffect(
     ()=>{
       const loadData = async ()=> {
@@ -23,12 +25,20 @@ const PresentacionesPage = ()=>{
     }
     ,[]
   );
+  const onCancel = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    routerNavigator('/modalpre');
+  }
   const { presentaciones, isLoading, errors } = useSelector(state=>state.presentaciones);
   console.log(presentaciones);
   return ( 
     <>
       {isLoading && (<Loading />)}
-      <Presentaciones presentaciones={presentaciones}/>
+      <Presentaciones 
+        presentaciones={presentaciones}
+        onCancelClick={onCancel}
+      />
     </>
   )
 }
