@@ -43,9 +43,6 @@ const Productos = ({productos, onCancelClick, onDeleteClick}) =>{
           <div className="precio-container">
             <h5 className="precio">${productoPrecio}</h5>
           </div>
-          <div className="button-container">
-            <button className="button-delete" onClick={onDeleteClick}>-</button>
-          </div>
         </div>
      </section>
    );

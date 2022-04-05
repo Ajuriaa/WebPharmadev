@@ -19,7 +19,7 @@ const ModalDeletePage = () => {
     e.preventDefault();
     e.stopPropagation();
     try {
-      const data = await publicAxios.post(
+      const data = await publicAxios.delete(
         '/api/v1/productos/deleteName',
         {
           productoNombre: txtnombreproducto
