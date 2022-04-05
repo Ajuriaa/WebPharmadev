@@ -1,18 +1,18 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
 
-import {AddButton} from "../../UX/Forms/Button";
+import {AddButton, DeleteButton} from "../../UX/Forms/Button";
 import './Productos.css';
 
-const Productos = ({productos, onCancelClick, onClickDelete}) =>{
+const Productos = ({productos, onCancelClick, onDeleteClick}) =>{
   return (
     <Page header={<h2>Productos</h2>} footer={<Nav/>}>
       <AddButton onClick={onCancelClick} >
         Agregar
       </AddButton>
-      <AddButton onClick={onClickDelete} >
+      <DeleteButton onClick={onDeleteClick} >
         Eliminar
-      </AddButton>
+      </DeleteButton>
       {
         productos.map((o) => (
           <ProductosItem key={o._id} 
@@ -39,6 +39,9 @@ const Productos = ({productos, onCancelClick, onClickDelete}) =>{
        <div className="info-container">
           <div className="precio-container">
             <h5 className="precio">${producto.productoPrecio}</h5>
+          </div>
+          <div className="button-container">
+            <button className="button-delete">-</button>
           </div>
         </div>
      </section>

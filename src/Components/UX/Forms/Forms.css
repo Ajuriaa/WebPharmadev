@@ -118,12 +118,32 @@ button.button_add{
 	font-size:17px;
 	text-decoration:none;
   transition:ease-in-out 0.5s;
-  position:relative;
-  float: right;
-  bottom: 65px;
+  position:absolute;
+  left: 90%;
+  top: 3px;
 }
 
 button.button_add:hover{
+  background-color:#445555;
+  transition: ease-in-out 0.2s;
+  border: 2px solid #25632b;
+}
+button.button_delete{
+  padding:0.75rem;
+  background-color: #5a7373;
+	border-radius:10px;
+	border:1px solid #1c4d21;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	text-decoration:none;
+  transition:ease-in-out 0.5s;
+  position:absolute;
+  left: 80%;
+  top: 3px;
+}
+
+button.button_delete:hover{
   background-color:#445555;
   transition: ease-in-out 0.2s;
   border: 2px solid #25632b;
