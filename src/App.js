@@ -12,6 +12,7 @@ import Login from './Components/Views/Login/LoginPage';
 import Productos from './Components/Views/Productos/ProductosPage';
 import Presentaciones from './Components/Views/Presentaciones/PresentacionesPage';
 import Laboratorios from './Components/Views/Laboratorios/LaboratoriosPage';
+import Modal from './Components/Views/Modal Add/ModalPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/productos" element={<Productos />} />
             <Route path="/presentaciones" element={<Presentaciones />} />
             <Route path="/laboratorios" element={<Laboratorios />} />
+            <Route path="/modal" element={<Modal />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>

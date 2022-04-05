@@ -28,6 +28,18 @@ export const SecondaryButton = ({ children, ...rest }) => {
   );
 }
 
+export const AddButton = ({ children, ...rest }) => {
+  return (
+    <BaseButton
+      className="button_add"
+      {...rest}
+    >
+      {children}
+    </BaseButton>
+  );
+}
+
+
 export const Button = ({ children, ...rest }) => {
   return (
     <BaseButton

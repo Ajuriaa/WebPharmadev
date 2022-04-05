@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { privateAxios } from '../../../Lib/apiClient';
+import { useNavigate } from 'react-router-dom';
 import Productos from './Productos';
 import Loading from '../../UX/Loading/Loading';
 
 const ProductosPage = ()=>{
   const dispatch = useDispatch();
+  const routerNavigator = useNavigate();
   useEffect(
     ()=>{
       const loadData = async ()=> {
@@ -25,12 +27,19 @@ const ProductosPage = ()=>{
     }
     ,[]
   );
+  const onCancel = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    routerNavigator('/modal');
+  }
   const { productos, isLoading, errors } = useSelector(state=>state.productos);
   console.log(productos)
   return (
     <>
       {isLoading && (<Loading />)}
-      <Productos productos={productos}/>
+      <Productos 
+      productos={productos}
+      onCancelClick={onCancel}/>
     </>
   )
 }

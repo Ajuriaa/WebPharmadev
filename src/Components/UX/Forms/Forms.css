@@ -108,6 +108,30 @@ button.button_secondary:hover{
   transform:scale(1.06);
 }
 
+button.button_add{
+  padding:0.75rem;
+  background-color: #5a7373;
+	border-radius:10px;
+	border:1px solid #1c4d21;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  transition:ease-in-out 0.5s;
+  position:relative;
+  float: right;
+  bottom: 65px;
+}
+
+button.button_add:hover{
+  background-color:#445555;
+  transition: ease-in-out 0.2s;
+  border: 2px solid #25632b;
+  transform:scale(1.06);
+}
+
+
 button.pill {
   border-radius: 50%;
 }
