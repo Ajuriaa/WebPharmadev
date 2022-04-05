@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-
 import { privateAxios } from '../../../Lib/apiClient';
-
 import Productos from './Productos';
 import Loading from '../../UX/Loading/Loading';
 
@@ -30,7 +28,7 @@ const ProductosPage = ()=>{
   return (
     <>
       {isLoading && (<Loading />)}
-      <Productos productos={productos} />
+      <Productos/>
     </>
   )
 }

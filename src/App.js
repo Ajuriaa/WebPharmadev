@@ -10,6 +10,8 @@ import Splash from './Components/Views/Splash';
 import Signin from './Components/Views/Signin/SigninPage';
 import Login from './Components/Views/Login/LoginPage';
 import Productos from './Components/Views/Productos/ProductosPage';
+import Presentaciones from './Components/Views/Presentaciones/PresentacionesPage';
+import Laboratorios from './Components/Views/Laboratorios/LaboratoriosPage';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/productos" element={<Productos />} />
+            <Route path="/presentaciones" element={<Presentaciones />} />
+            <Route path="/laboratorios" element={<Laboratorios />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>
