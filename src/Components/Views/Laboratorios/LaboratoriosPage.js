@@ -11,9 +11,9 @@ const LaboratoriosPage = ()=>{
       const loadData = async ()=> {
         dispatch({type:'LABORATORIOS_LOADING', payload:{}});
         try {
-          const { data: {Laboratorios,  status}} = await privateAxios.get('/api/v1/laboratorios/facet/1/10');
+          const { data: {laboratorios,  status}} = await privateAxios.get('/api/v1/laboratorios/all');
           dispatch({type:'LABORATORIOS_SUCCESS', payload: {laboratorios}});
-          console.log(Laboratorios);
+          console.log(laboratorios);
         } catch(ex){
           console.log(ex);
           dispatch({ type: 'LABORATORIOS_FAILED', payload: {} });
@@ -28,7 +28,7 @@ const LaboratoriosPage = ()=>{
   return (
     <>
       {isLoading && (<Loading />)}
-      <Laboratorios/>
+      <Laboratorios laboratorios={laboratorios}/>
     </>
   )
 }

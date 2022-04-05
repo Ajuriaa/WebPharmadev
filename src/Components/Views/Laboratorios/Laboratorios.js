@@ -1,13 +1,24 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
 
-const Laboratorios = ()=>{
+const Laboratorios = ({laboratorios})=>{
   return (
     <Page header={<h2>Laboratorios</h2>} footer={<Nav/>}>
-    <section>
-        <label>LISTADO COMPLETO DE Laboratorios SIUUU</label>
-    </section>
+      {
+        laboratorios.map(({ _id,LaboratorioNombre,LaboratorioDescripcion }) => (
+          <LaboratoriosItem key={_id} LaboratorioNombre={LaboratorioNombre} LaboratorioDescripcion={LaboratorioDescripcion} />
+        ))
+      }
     </Page>
+  );
+}
+
+const LaboratoriosItem = ({LaboratorioNombre, LaboratorioDescripcion}) => {
+  return (
+    <section>
+      {LaboratorioNombre}
+      {LaboratorioDescripcion}
+    </section>
   );
 }
 

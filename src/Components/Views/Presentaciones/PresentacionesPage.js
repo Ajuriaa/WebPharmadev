@@ -11,9 +11,9 @@ const PresentacionesPage = ()=>{
       const loadData = async ()=> {
         dispatch({type:'PRESENTACIONES_LOADING', payload:{}});
         try {
-          const { data: {Presentaciones,  status}} = await privateAxios.get('/api/v1/presentaciones/facet/1/10');
+          const { data: {presentaciones,  status}} = await privateAxios.get('/api/v1/presentaciones/');
           dispatch({type:'PRESENTACIONES_SUCCESS', payload: {presentaciones}});
-          console.log(Presentaciones);
+          console.log(presentaciones);
         } catch(ex){
           console.log(ex);
           dispatch({ type: 'PRESENTACIONES_FAILED', payload: {} });
@@ -25,10 +25,11 @@ const PresentacionesPage = ()=>{
     ,[]
   );
   const { presentaciones, isLoading, errors } = useSelector(state=>state.presentaciones);
-  return (
+  console.log(presentaciones);
+  return ( 
     <>
       {isLoading && (<Loading />)}
-      <Presentaciones/>
+      <Presentaciones presentaciones={presentaciones}/>
     </>
   )
 }
