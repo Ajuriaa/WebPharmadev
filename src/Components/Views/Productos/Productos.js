@@ -1,15 +1,18 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
 
-import {AddButton} from "../../UX/Forms/Button";
+import {AddButton, DeleteButton} from "../../UX/Forms/Button";
 import './Productos.css';
 
-const Productos = ({productos, onCancelClick}) =>{
+const Productos = ({productos, onCancelClick, onDeleteClick}) =>{
   return (
     <Page header={<h2>Productos</h2>} footer={<Nav/>}>
       <AddButton onClick={onCancelClick} >
         Agregar
       </AddButton>
+      <DeleteButton onClick={onDeleteClick} >
+        Eliminar
+      </DeleteButton>
       {
         productos.map(({ _id,productoNombre,productoDescripcion,productoImagen, productoPrecio, productoActivo }) => (
           <ProductosItem key={_id} 
@@ -24,7 +27,7 @@ const Productos = ({productos, onCancelClick}) =>{
   );
 }
 
- const ProductosItem = ({productoNombre, productoDescripcion, productoImagen, productoPrecio, productoActivo, onClickDelete}) => {
+ const ProductosItem = ({productoNombre, productoDescripcion, productoImagen, productoPrecio, productoActivo, onDeleteClick}) => {
    console.log(productoActivo)
    return (
      <section className="card-productos">
@@ -41,7 +44,7 @@ const Productos = ({productos, onCancelClick}) =>{
             <h5 className="precio">${productoPrecio}</h5>
           </div>
           <div className="button-container">
-            <button className="button-delete" onClick={onClickDelete}>-</button>
+            <button className="button-delete" onClick={onDeleteClick}>-</button>
           </div>
         </div>
      </section>

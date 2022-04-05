@@ -46,7 +46,7 @@ const ProductosPage = ()=>{
       <Productos 
       productos={productos}
       onCancelClick={onCancel}
-      onClickDelete={onDelete}/>
+      onDeleteClick={onDelete}/>
       
     </>
   )
