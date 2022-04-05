@@ -13,6 +13,7 @@ import Productos from './Components/Views/Productos/ProductosPage';
 import Presentaciones from './Components/Views/Presentaciones/PresentacionesPage';
 import Laboratorios from './Components/Views/Laboratorios/LaboratoriosPage';
 import Modal from './Components/Views/Modal Add/ModalPage';
+import ModalDelete from './Components/Views/ModalDelete/ModalDeletePage'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/presentaciones" element={<Presentaciones />} />
             <Route path="/laboratorios" element={<Laboratorios />} />
             <Route path="/modal" element={<Modal />} />
+            <Route path="/modalDelete" element={<ModalDelete />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>

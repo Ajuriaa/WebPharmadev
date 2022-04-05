@@ -32,6 +32,12 @@ const ProductosPage = ()=>{
     e.stopPropagation();
     routerNavigator('/modal');
   }
+
+  const onDelete = (e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    routerNavigator('/modalDelete');
+  }
   const { productos, isLoading, errors } = useSelector(state=>state.productos);
   console.log(productos)
   return (
@@ -39,7 +45,9 @@ const ProductosPage = ()=>{
       {isLoading && (<Loading />)}
       <Productos 
       productos={productos}
-      onCancelClick={onCancel}/>
+      onCancelClick={onCancel}
+      onClickDelete={onDelete}/>
+      
     </>
   )
 }
