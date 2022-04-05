@@ -1,11 +1,9 @@
-import { useSelector } from "react-redux"
 import { NavLink, useLocation } from "react-router-dom";
 
 import "./Nav.css";
 const Nav = ()=>{
-  const {_id, roles} = useSelector((state)=>state.security);
   const currentLocation = useLocation();
-  if (_id) {
+  if (currentLocation.pathname === '/productos' || currentLocation.pathname === '/presentaciones' || currentLocation.pathname === '/laboratorios') {
     return (
       <nav>
         <ul>
@@ -15,6 +13,22 @@ const Nav = ()=>{
               className={currentLocation.pathname === '/productos' ? 'active' : ''}
             >
               Productos
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/presentaciones'
+              className={currentLocation.pathname === '/presentaciones' ? 'active' : ''}
+            >
+              Presentaciones
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/laboratorios'
+              className={currentLocation.pathname === '/laboratorios' ? 'active' : ''}
+            >
+              Laboratorio
             </NavLink>
           </li>
         </ul>
