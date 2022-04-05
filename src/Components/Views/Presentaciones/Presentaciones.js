@@ -1,5 +1,6 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
+import './Presentaciones.css';
 
 const Presentaciones = ({presentaciones})=>{
   return (
@@ -15,10 +16,15 @@ const Presentaciones = ({presentaciones})=>{
 
 const PresentacionesItem = ({PresentacionNombre, PresentacionDescripcion}) => {
   return (
-    <section>
-      {PresentacionNombre}
-      {PresentacionDescripcion}
-    </section>
+    <section className="card-pres">
+        <div className="info-pres">
+          <h3 className="title-pres">{PresentacionNombre}</h3>
+          <p className="pres-description">{PresentacionDescripcion}</p>
+        </div>
+        <div className="button-container">
+          <button className="button-delete">-</button>
+        </div>
+     </section>
   );
 }
 

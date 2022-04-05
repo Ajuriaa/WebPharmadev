@@ -11,14 +11,13 @@ const PresentacionesPage = ()=>{
       const loadData = async ()=> {
         dispatch({type:'PRESENTACIONES_LOADING', payload:{}});
         try {
-          const { data: {presentaciones,  status}} = await privateAxios.get('/api/v1/presentaciones/');
+          const { data: {presentaciones,  status}} = await privateAxios.get('/api/v1/presentaciones/all');
           dispatch({type:'PRESENTACIONES_SUCCESS', payload: {presentaciones}});
           console.log(presentaciones);
         } catch(ex){
           console.log(ex);
           dispatch({ type: 'PRESENTACIONES_FAILED', payload: {} });
         }
-        
       }
       loadData();
     }

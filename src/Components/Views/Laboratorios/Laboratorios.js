@@ -1,6 +1,7 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
 import {AddButton} from "../../UX/Forms/Button";
+import './Laboratorios.css';
 
 const Laboratorios = ({laboratorios, onCancelClick})=>{
   return (
@@ -19,10 +20,15 @@ const Laboratorios = ({laboratorios, onCancelClick})=>{
 
 const LaboratoriosItem = ({LaboratorioNombre, LaboratorioDescripcion}) => {
   return (
-    <section>
-      {LaboratorioNombre}
-      {LaboratorioDescripcion}
-    </section>
+    <section className="card-pres">
+        <div className="info-pres">
+          <h3 className="title-pres">{LaboratorioNombre}</h3>
+          <p className="pres-description">{LaboratorioDescripcion}</p>
+        </div>
+        <div className="button-container">
+          <button className="button-delete">-</button>
+        </div>
+     </section>
   );
 }
 
