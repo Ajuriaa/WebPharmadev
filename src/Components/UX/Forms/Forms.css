@@ -116,7 +116,6 @@ button.button_add{
 	cursor:pointer;
 	color:#ffffff;
 	font-size:17px;
-	padding:16px 31px;
 	text-decoration:none;
   transition:ease-in-out 0.5s;
   position:relative;
@@ -128,7 +127,6 @@ button.button_add:hover{
   background-color:#445555;
   transition: ease-in-out 0.2s;
   border: 2px solid #25632b;
-  transform:scale(1.06);
 }
 
 

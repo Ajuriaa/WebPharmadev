@@ -43,7 +43,8 @@ const ModalPage = () => {
       dispatch({ type:'ON_PRODUCTADD_SUCCESS', payload:{data}});
       routerNavigator('/productos');
     } catch (ex) {
-      dispatch({ type:'ON_PRODUCTADD_ERROR', payload:{errors:['Error en el SigIn']}});
+      dispatch({ type:'ON_PRODUCTADD_ERROR', payload:{errors:['Error']}});
+      routerNavigator('/productos');
     }
   }
   const onCancel = (e) => {
