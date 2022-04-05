@@ -1,0 +1,54 @@
+.card-productos{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+    padding: 20px 20px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.image-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-producto{
+    width: 130px;
+    text-align: center;
+}
+
+.precio-container{
+    position: relative;
+    float: right;
+    text-align: center;
+}
+
+.precio{
+    color: rgb(187, 121, 0);
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.info-producto{
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+}
+
+.button-container{
+    text-align: center;
+}
+
+.button-delete{
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+}
