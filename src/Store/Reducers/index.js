@@ -5,7 +5,6 @@ import { presentacionesReducer } from './Presentaciones/Presentaciones.reducer';
 import { laboratoriosReducer } from './Laboratorio/Laboratorios.reducer';
 import {modalReducer } from './ModalProductos/modalProductos.reducer'
 import {modalDeleteReducer} from './ModalDelete/modalDelete.reducer'
-import {modalReducer } from './ModalProductos/modalProductos.reducer';
 import {modalLabReducer} from './ModalLaboratorios/modalLaboratorio.reducer';
 import {modalPreReducer} from './ModalPresentaciones/modalPresentaciones.reducer';
 
