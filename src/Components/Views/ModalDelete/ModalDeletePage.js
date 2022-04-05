@@ -25,10 +25,10 @@ const ModalDeletePage = () => {
           productoNombre: txtnombreproducto
         }
       );
-      dispatch({ type:'ON_PRODUCTREMOVE_SUCCESS', payload:{data}});
+      dispatch({ type:'ON_PRODUCTDELETE_SUCCESS', payload:{data}});
       routerNavigator('/productos');
     } catch (ex) {
-      dispatch({ type:'ON_PRODUCTREMOVE_ERROR', payload:{errors:['Error']}});
+      dispatch({ type:'ON_PRODUCTDELETE_ERROR', payload:{errors:['Error']}});
       routerNavigator('/productos');
     }
   }

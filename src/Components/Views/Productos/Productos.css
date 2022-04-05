@@ -62,3 +62,11 @@
     color: rgb(255, 0, 0);
     font-weight: bold;
 }
+.button-delete{
+    visibility:visible;
+    display: block;
+}
+.button-delete:checked{
+    visibility: hidden;
+    display: none;
+}
