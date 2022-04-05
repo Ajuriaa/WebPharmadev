@@ -41,9 +41,7 @@ const Productos = ({productos, onCancelClick}) =>{
             <h5 className="precio">${productoPrecio}</h5>
           </div>
           <div className="button-container">
-          <AddButton onClick={onClickDelete} >
-            Eliminar
-          </AddButton>
+            <button className="button-delete" onClick={onClickDelete}>-</button>
           </div>
         </div>
      </section>
