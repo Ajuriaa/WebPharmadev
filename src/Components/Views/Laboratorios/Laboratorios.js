@@ -10,20 +10,20 @@ const Laboratorios = ({laboratorios, onCancelClick})=>{
         Agregar
       </AddButton>
       {
-        laboratorios.map(({ _id,LaboratorioNombre,LaboratorioDescripcion }) => (
-          <LaboratoriosItem key={_id} LaboratorioNombre={LaboratorioNombre} LaboratorioDescripcion={LaboratorioDescripcion} />
+        laboratorios.map((o) => (
+          <LaboratoriosItem key={o._id} laboratorio={o} />
         ))
       }
     </Page>
   );
 }
 
-const LaboratoriosItem = ({LaboratorioNombre, LaboratorioDescripcion}) => {
+const LaboratoriosItem = ({laboratorio}) => {
   return (
     <section className="card-pres">
         <div className="info-pres">
-          <h3 className="title-pres">{LaboratorioNombre}</h3>
-          <p className="pres-description">{LaboratorioDescripcion}</p>
+          <h3 className="title-pres">{laboratorio.LaboratorioNombre}</h3>
+          <p className="pres-description">{laboratorio.LaboratorioDescripcion}</p>
         </div>
         <div className="button-container">
           <button className="button-delete">-</button>

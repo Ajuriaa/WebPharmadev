@@ -6,20 +6,20 @@ const Presentaciones = ({presentaciones})=>{
   return (
     <Page header={<h2>Presentaciones</h2>} footer={<Nav/>}>
     {
-      presentaciones.map(({ _id,PresentacionNombre,PresentacionDescripcion }) => (
-        <PresentacionesItem key={_id} PresentacionNombre={PresentacionNombre} PresentacionDescripcion={PresentacionDescripcion} />
+      presentaciones.map((o) => (
+        <PresentacionesItem key={o._id} presentacion={o} />
       ))
     }
     </Page>
   );
 }
 
-const PresentacionesItem = ({PresentacionNombre, PresentacionDescripcion}) => {
+const PresentacionesItem = ({presentacion}) => {
   return (
     <section className="card-pres">
         <div className="info-pres">
-          <h3 className="title-pres">{PresentacionNombre}</h3>
-          <p className="pres-description">{PresentacionDescripcion}</p>
+          <h3 className="title-pres">{presentacion.PresentacionNombre}</h3>
+          <p className="pres-description">{presentacion.PresentacionDescripcion}</p>
         </div>
         <div className="button-container">
           <button className="button-delete">-</button>
