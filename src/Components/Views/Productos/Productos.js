@@ -1,29 +1,34 @@
 import Nav from "../../UX/Nav/Nav";
 import Page from "../../UX/Page/Page";
 import './Productos.css';
-import { Link } from "react-router-dom";
 
 const Productos = ({productos}) =>{
   return (
     <Page header={<h2>Productos</h2>} footer={<Nav/>}>
       {
-        productos.map(({ _id,productoNombre,productoDescripcion,productoImagen, productoPrecio }) => (
-          <ProductosItem key={_id} productoNombre={productoNombre} productoDescripcion={productoDescripcion} productoImagen={productoImagen} productoPrecio={productoPrecio}/>
+        productos.map(({ _id,productoNombre,productoDescripcion,productoImagen, productoPrecio, productoActivo }) => (
+          <ProductosItem key={_id} 
+          productoNombre={productoNombre} 
+          productoDescripcion={productoDescripcion} 
+          productoImagen={productoImagen} 
+          productoPrecio={productoPrecio} 
+          productoActivo={productoActivo}/>
         ))
       }
     </Page>
   );
 }
 
- const ProductosItem = ({productoNombre, productoDescripcion, productoImagen, productoPrecio}) => {
-   console.log()
+ const ProductosItem = ({productoNombre, productoDescripcion, productoImagen, productoPrecio, productoActivo}) => {
+   console.log(productoActivo)
    return (
      <section className="card-productos">
        <div className="image-container">
           <img src={productoImagen} className="img-producto"/>
           <div className="info-producto">
-            <h3 className="title-producto"><Link to="/">{productoNombre}</Link></h3>
+            <h3 className="title-producto">{productoNombre}</h3>
             <p className="product-description">{productoDescripcion}</p>
+            <p className={productoActivo==="True" ? "in-stock" : "agotado"}>{productoActivo==="True" ? "En Stock" : "Agotado"}</p>
           </div>
        </div>
        <div className="info-container">

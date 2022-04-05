@@ -52,3 +52,13 @@
     border: none;
     border-radius: 6px;
 }
+
+.in-stock{
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+}
+
+.agotado{
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
